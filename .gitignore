@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#modules installed by npm
+npm_modles
+
 # C extensions
 *.so
 
