@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 #modules installed by npm
-npm_modles
+node_modules
 
 # C extensions
 *.so
