@@ -60,7 +60,36 @@ export const AppReducer = (state, action) => {
         case 'SET_BUDGET':
             action.type = "DONE";
             state.budget = action.payload;
-
+            /*if (state.expenses) {
+                const totalExpenses = state.expenses.reduce((total, item) => {
+                return (total = total + item.cost);
+            }, 0);
+            const remaining = state.budget - totalExpenses;
+            if(remaining < 0){
+                state.budget = totalExpenses;
+                alert("Budget cannot be less than current expenses!");
+            }
+            }*/
+            return {
+                ...state,
+            };
+        case 'SET_BUDGET_BLUR':
+            action.type = "DONE";
+            state.budget = action.payload;
+            if (state.expenses) {
+                 const totalExpenses = state.expenses.reduce((total, item) => {
+                return (total = total + item.cost);
+            }, 0);
+            const remaining = state.budget - totalExpenses;
+            if(remaining < 0){
+                state.budget = totalExpenses;
+                alert("Budget cannot be less than current expenses!");
+            }
+            if(state.budget > 20000){
+                state.budget = 20000;
+                alert("Budget cannot exceed " + state.currency + " 20000");
+            }
+            }
             return {
                 ...state,
             };

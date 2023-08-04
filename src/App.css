@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.Plus-button{
+  background-color:rgb(7, 214, 7);
+  border-radius: 50%;
+  text-align:center;
+  font-size: large;
+  color:white;
+  font-weight: bold;
+  border:transparent;
+}
